@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico Escolar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            margin: 0;
+            background-color: #e2e2e2;
+            color: #333;
+        }
+        /* Top Navigation */
+        .navbar {
+            background-color: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            color: #555;
+            line-height: 1.1;
+        }
+        .logo-icon {
+            color: #007f66;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header Section */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .page-title {
+            color: #174c73;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .close-btn {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .student-info {
+            font-size: 15px;
+            color: #174c73;
+            margin-bottom: 30px;
+        }
+        .student-info span {
+            margin-right: 30px;
+        }
+        .student-info strong {
+            color: #333;
+        }
+
+        /* Card Section */
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* Course Info */
+        .course-info {
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            border: none;
+            padding: 8px 16px;
+            font-size: 12px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-dark {
+            background-color: #4a4a4a;
+        }
+        .btn-blue {
+            background-color: #4aa3ff;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+            text-align: center;
+        }
+        th, td {
+            border: 1px solid #888;
+            padding: 6px 4px;
+        }
+        th {
+            background-color: #eaeaea;
+            color: #333;
+            font-weight: bold;
+        }
+        .table-main-header {
+            background-color: #595959;
+            color: #ffffff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .col-left {
+            text-align: left;
+            padding-left: 8px;
+        }
+        .col-right {
+            text-align: right;
+            padding-right: 8px;
+        }
+        
+        /* Specific Rows */
+        .row-green {
+            background-color: #e8f5e9;
+        }
+
+        /* Floating Button */
+        .floating-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: white;
+            border: 1px solid #007f66;
+            color: #007f66;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="logo-icon">A</span>
+            <div>
+                Universidade<br>
+                <strong>Anhembi Morumbi</strong>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#">Página inicial</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Histórico escolar</h1>
+            <button class="close-btn">x</button>
+        </div>
+
+        <div class="student-info">
+            <span>Nome: <strong>RODRIGO ARCANJO DE SOUSA</strong></span>
+            <span>Matrícula: <strong>2022210400</strong></span>
+        </div>
+
+        <div class="card">
+            <div class="course-info">
+                <div>Curso: 124 - SUPERIOR DE TECNOLOGIA EM DESIGN GRÁFICO</div>
+                <div>Currículo: 201891 - DESIGN GRÁFICO - 2025.1 - E2A</div>
+                <div>Situação: Ativo</div>
+                <div>Forma de Ingresso: Vestibular</div>
+                <div>Carga Horária Exigida: 1670</div>
+                <div>Carga Horária Contabilizada: 1340</div>
+            </div>
+
+            <div class="actions">
+                <button class="btn btn-dark">&lt;&lt; Voltar</button>
+                <button class="btn btn-dark">Histórico de simples conferência com autenticação</button>
+                <button class="btn btn-blue">Histórico Oficial Digital</button>
+            </div>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td colspan="9" class="table-main-header">Histórico</td>
+                    </tr>
+                    <tr>
+                        <td colspan="9" class="table-main-header" style="background-color: #666;">COMPONENTES CURRICULARES</td>
+                    </tr>
+                    <tr>
+                        <th>Código</th>
+                        <th>Componente Curricular</th>
+                        <th>C.H.</th>
+                        <th>Créd. Acad.</th>
+                        <th>Período</th>
+                        <th>Docente</th>
+                        <th>Titulação</th>
+                        <th>Grau</th>
+                        <th>Situação</th>
+                    </tr>
+                    <tr>
+                        <td>EGR0060</td>
+                        <td class="col-left">CORE CURRICULUM</td>
+                        <td>160</td>
+                        <td></td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>APROVEITAMENTO</td>
+                    </tr>
+                    <tr class="row-green">
+                        <td></td>
+                        <td class="col-right">MEIO AMBIENTE, SUSTENTABILIDADE E ANÁLISE SOCIAL [EGR0513]</td>
+                        <td>160</td>
+                        <td>0</td>
+                        <td>2023/2</td>
+                        <td class="col-left">FERNANDA RAGGI GROSSI SILVA</td>
+                        <td>MESTRE</td>
+                        <td>7,00</td>
+                        <td>APROVADO</td>
+                    </tr>
+                    <tr>
+                        <td>EGR0131</td>
+                        <td class="col-left">ESTUDOS CRÍTICOS: HISTÓRIA, ARTE E CULTURA</td>
+                        <td>160</td>
+                        <td>0</td>
+                        <td>2022/2</td>
+                        <td class="col-left">MARIA APARECIDA DE OLIVEIRA BRANDAO</td>
+                        <td>MESTRE</td>
+                        <td>8,00</td>
+                        <td>APROVADO</td>
+                    </tr>
+                    <tr>
+                        <td>EGR0143</td>
+                        <td class="col-left">EXPRESSÃO VISUAL</td>
+                        <td>160</td>
+                        <td>0</td>
+                        <td>2023/1</td>
+                        <td class="col-left">CAROLINE FERREIRA LEITE DE MELLO</td>
+                        <td>MESTRE</td>
+                        <td>9,60</td>
+                        <td>APROVADO</td>
+                    </tr>
+                    <tr>
+                        <td>EGR0193</td>
+                        <td class="col-left">IMAGEM E IDENTIDADE VISUAL</td>
+                        <td>160</td>
+                        <td>0</td>
+                        <td>2024/1</td>
+                        <td class="col-left">CARLOS MAGNO PEREIRA</td>
+                        <td>MESTRE</td>
+                        <td>9,80</td>
+                        <td>APROVADO</td>
+                    </tr>
+                    <tr>
+                        <td>EGR0199</td>
+                        <td class="col-left">INFORMAÇÃO E PROJETO GRÁFICO</td>
+                        <td>160</td>
+                        <td>0</td>
+                        <td>2024/1</td>
+                        <td class="col-left">AUDREY MARQUES DUARTE</td>
+                        <td>DOUTOR</td>
+                        <td>8,30</td>
+                        <td>APROVADO</td>
+                    </tr>
+                    <tr>
+                        <td>EGR0218</td>
+                        <td class="col-left">LINGUAGENS VISUAIS E TIPOGRAFIA</td>
+                        <td>160</td>
+                        <td>0</td>
+                        <td>2023/2</td>
+                        <td class="col-left">ANTUNES VILA NOVA NETO</td>
+                        <td>MESTRE</td>
+                        <td>9,10</td>
+                        <td>APROVADO</td>
+                    </tr>
+                    <tr>
+                        <td>EGR0240</td>
+                        <td class="col-left">METODOLOGIA DE PROJETO</td>
+                        <td>160</td>
+                        <td>0</td>
+                        <td>2023/1</td>
+                        <td class="col-left">CAROLINE FERREIRA LEITE DE MELLO</td>
+                        <td>MESTRE</td>
+                        <td>8,30</td>
+                        <td>APROVADO</td>
+                    </tr>
+                    <tr>
+                        <td>EGR0632</td>
+                        <td class="col-left">SISTEMAS DE REPRESENTAÇÃO E INTERFACES</td>
+                        <td>160</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td class="col-left">-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>PENDENTE</td>
+                    </tr>
+                    <tr>
+                        <td>EGR0386</td>
+                        <td class="col-left">UNIDADE CURRICULAR DIGITAL PERSONALIZÁVEL</td>
+                        <td>160</td>
+                        <td></td>
+                        <td>-</td>
+                        <td class="col-left">-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>APROVEITAMENTO</td>
+                    </tr>
+                    <tr class="row-green">
+                        <td></td>
+                        <td class="col-right">MARKETING DIGITAL [EGR0227]</td>
+                        <td>160</td>
+                        <td>0</td>
+                        <td>2024/2</td>
+                        <td class="col-left">-</td>
+                        <td>-</td>
+                        <td>7,30</td>
+                        <td>APROVADO</td>
+                    </tr>
+                    <tr>
+                        <td>EGR0388</td>
+                        <td class="col-left">VIDA & CARREIRA</td>
+                        <td>60</td>
+                        <td>0</td>
+                        <td>2022/2</td>
+                        <td class="col-left">CLAUDIA HELENA DA CRUZ</td>
+                        <td>DOUTOR</td>
+                        <td>9,50</td>
+                        <td>APROVADO</td>
+                    </tr>
+                    <tr>
+                        <td colspan="9" class="table-main-header" style="background-color: #666;">EXTENSÃO</td>
+                    </tr>
+                    <tr>
+                        <th>Código</th>
+                        <th>Componente Curricular</th>
+                        <th>C.H.</th>
+                        <th>Créd. Acad.</th>
+                        <th>Período</th>
+                        <th>Docente</th>
+                        <th>Titulação</th>
+                        <th>Grau</th>
+                        <th>Situação</th>
+                    </tr>
+                    <tr>
+                        <td>EXGR170</td>
+                        <td class="col-left">EXTENSÃO - CH 170</td>
+                        <td>170</td>
+                        <td></td>
+                        <td>-</td>
+                        <td class="col-left">-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>PENDENTE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="floating-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M2.678 11.894a1 1 0 0 1 .287.801 11 11 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8 8 0 0 0 8 14c3.996 0 7-2.807 7-6s-3.004-6-7-6-7 2.808-7 6c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a22 22 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a10 10 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105"/>
+        </svg>
+        Fale conosco
+    </div>
+
+</body>
+</html>

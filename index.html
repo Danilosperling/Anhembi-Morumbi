@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Histórico escolar - Mockup</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#e5e5e5;
+  color:#1c2f42;
+}
+
+header{
+  height:56px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 9%;
+  color:#555;
+  font-size:14px;
+}
+
+header img{height:32px}
+
+main{
+  max-width:980px;
+  margin:32px auto;
+  padding:0 18px;
+}
+
+.top{
+  border-bottom:1px solid #ccc;
+  position:relative;
+  padding-bottom:14px;
+}
+
+h1{
+  margin:0;
+  color:#244866;
+  font-size:34px;
+}
+
+.close{
+  position:absolute;
+  right:0;
+  top:0;
+  width:36px;
+  height:36px;
+  border:none;
+  border-radius:50%;
+  background:#fff;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.dados{
+  display:flex;
+  gap:54px;
+  margin:18px 0 44px;
+  font-size:15px;
+}
+
+.dados strong{color:#1d3b57}
+
+.card{
+  background:#fff;
+  border-radius:10px;
+  padding:16px 10px 14px;
+  overflow-x:auto;
+}
+
+.info{
+  text-align:center;
+  font-size:12px;
+  line-height:1.55;
+  color:#222;
+}
+
+.botoes{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:4px;
+  margin:8px 0;
+}
+
+button{
+  border:0;
+  padding:8px 12px;
+  font-size:11px;
+  font-weight:bold;
+  color:#fff;
+  background:#444;
+}
+
+.azul{background:#3ba0e6}
+
+table{
+  width:100%;
+  min-width:900px;
+  border-collapse:collapse;
+  font-size:11px;
+  color:#222;
+}
+
+th,td{
+  border:1px solid #777;
+  padding:6px;
+}
+
+th{
+  background:#ddd;
+  text-align:center;
+}
+
+.secao{
+  background:#4d4d4d;
+  color:#fff;
+  text-align:center;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.subsecao{
+  background:#4d4d4d;
+  color:#fff;
+  text-align:center;
+  font-weight:bold;
+}
+
+.aprovado{background:#ecffec}
+
+.aviso{
+  margin-top:10px;
+  text-align:center;
+  font-size:10px;
+  color:#777;
+}
+
+.chat{
+  position:fixed;
+  right:24px;
+  bottom:18px;
+  background:#fff;
+  border:2px solid #008b7a;
+  border-radius:24px;
+  padding:10px 18px;
+  color:#008b7a;
+  font-size:12px;
+  font-weight:bold;
+}
+
+@media(max-width:700px){
+  header{
+    padding:0 18px;
+  }
+
+  header img{height:28px}
+  header span{display:none}
+
+  main{
+    margin:22px auto;
+    padding:0 12px;
+  }
+
+  h1{font-size:26px}
+
+  .dados{
+    flex-direction:column;
+    gap:6px;
+    margin-bottom:24px;
+    font-size:14px;
+  }
+
+  .card{
+    border-radius:8px;
+    padding:12px 8px;
+  }
+
+  .info{font-size:11px}
+
+  .chat{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="logo.png" alt="Universidade Anhembi Morumbi">
+  <span>Página inicial</span>
+</header>
+
+<main>
+
+<section class="top">
+  <h1>Histórico escolar</h1>
+  <button class="close">x</button>
+</section>
+
+<section class="dados">
+  <div>Nome: <strong>RODRIGO ARCANJO SOUSA</strong></div>
+  <div>Matrícula: <strong>2025390100</strong></div>
+</section>
+
+<section class="card">
+
+<div class="info">
+  Curso: 124 - SUPERIOR DE TECNOLOGIA EM DESIGN GRÁFICO<br>
+  Currículo: 201891 - DESIGN GRÁFICO - 2025.1 - E2A<br>
+  Situação: Ativo<br>
+  Forma de Ingresso: Vestibular<br>
+  Carga Horária Exigida: 1670<br>
+  Carga Horária Contabilizada: 1340
+</div>
+
+<div class="botoes">
+  <button>&lt;&lt; Voltar</button>
+  <button>Histórico de simples conferência com autenticação</button>
+  <button class="azul">Histórico Oficial Digital</button>
+</div>
+
+<table>
+<tr><td colspan="9" class="secao">Histórico</td></tr>
+<tr><td colspan="9" class="subsecao">COMPONENTES CURRICULARES</td></tr>
+
+<tr>
+  <th>Código</th>
+  <th>Componente Curricular</th>
+  <th>C.H.</th>
+  <th>Créd. Acad.</th>
+  <th>Período</th>
+  <th>Docente</th>
+  <th>Titulação</th>
+  <th>Grau</th>
+  <th>Situação</th>
+</tr>
+
+<tr>
+  <td>EGR0060</td>
+  <td>CORE CURRICULUM</td>
+  <td>160</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>APROVEITAMENTO</td>
+</tr>
+
+<tr class="aprovado">
+  <td></td>
+  <td>MEIO AMBIENTE, SUSTENTABILIDADE E ANÁLISE SOCIAL [EGR0513]</td>
+  <td>160</td>
+  <td>0</td>
+  <td>2023/2</td>
+  <td>FERNANDA RAGGI GROSSI SILVA</td>
+  <td>MESTRE</td>
+  <td>7,00</td>
+  <td>APROVADO</td>
+</tr>
+
+<tr>
+  <td>EGR0131</td>
+  <td>ESTUDOS CRÍTICOS: HISTÓRIA, ARTE E CULTURA</td>
+  <td>160</td>
+  <td>0</td>
+  <td>2022/2</td>
+  <td>MARIA APARECIDA DE OLIVEIRA BRANDÃO</td>
+  <td>MESTRE</td>
+  <td>8,00</td>
+  <td>APROVADO</td>
+</tr>
+
+<tr>
+  <td>EGR0143</td>
+  <td>EXPRESSÃO VISUAL</td>
+  <td>160</td>
+  <td>0</td>
+  <td>2023/1</td>
+  <td>CAROLINE FERREIRA LEITE DE MELLO</td>
+  <td>MESTRE</td>
+  <td>9,60</td>
+  <td>APROVADO</td>
+</tr>
+
+<tr>
+  <td>EGR0193</td>
+  <td>IMAGEM E IDENTIDADE VISUAL</td>
+  <td>160</td>
+  <td>0</td>
+  <td>2024/1</td>
+  <td>CARLOS MAGNO PEREIRA</td>
+  <td>MESTRE</td>
+  <td>9,80</td>
+  <td>APROVADO</td>
+</tr>
+
+<tr>
+  <td>EGR0199</td>
+  <td>INFORMAÇÃO E PROJETO GRÁFICO</td>
+  <td>160</td>
+  <td>0</td>
+  <td>2024/1</td>
+  <td>AUDREY MARQUES DUARTE</td>
+  <td>DOUTOR</td>
+  <td>8,30</td>
+  <td>APROVADO</td>
+</tr>
+
+<tr>
+  <td>EGR0218</td>
+  <td>LINGUAGENS VISUAIS E TIPOGRAFIA</td>
+  <td>160</td>
+  <td>0</td>
+  <td>2023/2</td>
+  <td>ANTUNES VILA NOVA NETO</td>
+  <td>MESTRE</td>
+  <td>9,10</td>
+  <td>APROVADO</td>
+</tr>
+
+<tr>
+  <td>EGR0240</td>
+  <td>METODOLOGIA DE PROJETO</td>
+  <td>160</td>
+  <td>0</td>
+  <td>2023/1</td>
+  <td>CAROLINE FERREIRA LEITE DE MELLO</td>
+  <td>MESTRE</td>
+  <td>8,30</td>
+  <td>APROVADO</td>
+</tr>
+
+<tr>
+  <td>EGR0632</td>
+  <td>SISTEMAS DE REPRESENTAÇÃO E INTERFACES</td>
+  <td>160</td>
+  <td>0</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>PENDENTE</td>
+</tr>
+
+<tr>
+  <td>EGR0386</td>
+  <td>UNIDADE CURRICULAR DIGITAL PERSONALIZÁVEL</td>
+  <td>160</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>APROVEITAMENTO</td>
+</tr>
+
+<tr class="aprovado">
+  <td></td>
+  <td>MARKETING DIGITAL [EGR0227]</td>
+  <td>160</td>
+  <td>0</td>
+  <td>2024/2</td>
+  <td>-</td>
+  <td>-</td>
+  <td>7,30</td>
+  <td>APROVADO</td>
+</tr>
+
+<tr>
+  <td>EGR0388</td>
+  <td>VIDA & CARREIRA</td>
+  <td>60</td>
+  <td>0</td>
+  <td>2022/2</td>
+  <td>CLAUDIA HELENA DA CRUZ</td>
+  <td>DOUTOR</td>
+  <td>9,50</td>
+  <td>APROVADO</td>
+</tr>
+
+<tr><td colspan="9" class="secao">EXTENSÃO</td></tr>
+
+<tr>
+  <th>Código</th>
+  <th>Componente Curricular</th>
+  <th>C.H.</th>
+  <th>Créd. Acad.</th>
+  <th>Período</th>
+  <th>Docente</th>
+  <th>Titulação</th>
+  <th>Grau</th>
+  <th>Situação</th>
+</tr>
+
+<tr>
+  <td>EXGR170</td>
+  <td>EXTENSÃO - CH 170</td>
+  <td>170</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>-</td>
+  <td>PENDENTE</td>
+</tr>
+
+</table>
+
+<div class="aviso">
+</div>
+
+</section>
+
+</main>
+
+<div class="chat">Fale conosco</div>
+
+</body>
+</html>
